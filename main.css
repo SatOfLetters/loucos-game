@@ -126,7 +126,7 @@ html,
 
 
   header .logo {
-    width: clamp(18rem, 62vw, 25rem);
+    width: clamp(18rem, 62vw, 26rem);
     margin: 0 auto 0 0;
   }
 
@@ -281,6 +281,7 @@ html,
   } .homem {
     width:clamp(16rem, 80vw, 55rem);
     margin:0 auto;
+    display: flex;
   } .intro_ctnr h2 {
     color:var(--c2);
     font-weight: 100;
@@ -413,50 +414,9 @@ html,
 
 
 
-
-footer {
-  background-color: var(--c2);
-  padding: clamp(4rem, 10vw, 5rem) 0;
-  margin: clamp(4rem, 10vw, 6rem) 0 clamp(4rem, 36vw, 11rem);
-  box-sizing: border-box;
-} footer .logo {
-  width: clamp(22rem, 75vw, 35rem);
-} footer .width1, footer nav, .icons_row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: clamp(1rem, 6vw, 2.5rem);
-} footer nav, .icons_row {
-  flex-direction: row;
-} footer .width1 {
-  flex-direction: column;
-} .icons_row a {
-  background-position: center;
-  background-size: 62%;
-  width: clamp(3rem, 11vw, 4.2rem);
-  height: clamp(3rem, 11vw, 4.2rem);
-  border-radius: 0.4rem;
-  background-color: rgba(255,255,255,0.04);
-  background-repeat: no-repeat;
-} .discord {
-  background-image: url(assets/discord.svg);
-} .telegram {
-  background-image: url(assets/telegram.svg);
-} .twitter {
-  background-image: url(assets/twitter.svg);
-} .github {
-  background-image: url(assets/github.svg);
-} .medium {
-  background-image: url(assets/medium.svg);
-}
-
-
-
-
-
-
 .faq_section {
   padding: clamp(5rem, 10vw, 9rem) 0;
+  position: relative;
 } .faq_section h3 {
   font-size: clamp(2.3rem, 7vw, 3.5rem);
   color: var(--c3);
@@ -519,7 +479,7 @@ footer {
   transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 1.5rem;
   color: var(--darkb);
-  background: #e3f5ed80;
+  background: #e3f5ede6;
   position: relative;
   top: -1rem;
   border-radius: 0 0 0.6rem 0.6rem;
@@ -539,6 +499,65 @@ footer {
 } .collapsible_content a:hover {
   background-color:var(--light);
 }
+
+
+
+
+
+
+
+
+
+
+footer {
+  background-color: var(--c2);
+  padding: clamp(4rem, 10vw, 5rem) 0;
+  /* margin: clamp(4rem, 10vw, 6rem) 0 clamp(4rem, 36vw, 11rem); */
+  margin: 0 0 clamp(4rem, 36vw, 11rem);
+  box-sizing: border-box;
+} footer .logo {
+  width: clamp(22rem, 75vw, 35rem);
+} footer .width1, footer nav, .icons_row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(1rem, 6vw, 2.5rem);
+} footer nav, .icons_row {
+  flex-direction: row;
+} footer .width1 {
+  flex-direction: column;
+} .icons_row a {
+  background-position: center;
+  background-size: 62%;
+  width: clamp(3rem, 11vw, 4.2rem);
+  height: clamp(3rem, 11vw, 4.2rem);
+  border-radius: 0.4rem;
+  background-color: rgba(255,255,255,0.04);
+  background-repeat: no-repeat;
+} .discord {
+  background-image: url(assets/discord.svg);
+} .telegram {
+  background-image: url(assets/telegram.svg);
+} .twitter {
+  background-image: url(assets/twitter.svg);
+} .github {
+  background-image: url(assets/github.svg);
+} .medium {
+  background-image: url(assets/medium.svg);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -606,6 +625,8 @@ footer {
     } .homem {
       margin:unset;
       width: clamp(34rem, 38vw, 50rem);
+      will-change: transform;
+      transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
     }
 
     .det1, .det2 {
@@ -613,6 +634,7 @@ footer {
       height:unset;
     }
     .definition_section {
+      position: relative;
       overflow: unset;
     } .definition_section .width1 {
       display: flex;
@@ -653,8 +675,18 @@ footer {
       filter: drop-shadow(0px 0.6rem 0.1rem rgba(0,0,0,0.2));
     }
 
+
+
+    .collapsible_content {
+      background: #e3f5ed80;
+    }
+
+
+
+
+
     footer {
-      margin: clamp(4rem, 10vw, 6rem) 0;
+      margin: 0 0 clamp(4rem, 10vw, 6rem) 0;
     }
     footer .width1 {
       flex-direction: row;
@@ -716,7 +748,7 @@ footer {
       background-color: var(--light);
       border: 0.1rem solid var(--c2b);
     } .nav_ctnr a:hover {
-      background-color: var(--c2b);
+      background-color: var(--c1d);
       transition: background-color 0.06s ease;
     }
     header nav {

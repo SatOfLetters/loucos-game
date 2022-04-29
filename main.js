@@ -65,7 +65,8 @@ if(window.matchMedia('(min-width:820px)').matches) {
 }
 
 let windowPosition;
-const fixedCTA = document.querySelector('header .cta_ctnr')
+const fixedCTA = document.querySelector('header .cta_ctnr');
+const homem = document.querySelector('.homem')
 
 document.body.onscroll = function() {
     windowPosition = window.pageYOffset;
@@ -80,6 +81,8 @@ document.body.onscroll = function() {
         } else {
             fixedCTA.style.transform = 'translateY(100%)'
         }
+    } else {
+        homem.style.transform = 'translateY(' + windowPosition / 4 + 'px)';
     }
 }
 
@@ -95,15 +98,17 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.maxHeight){
-        content.style.maxHeight = null;
-    } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-    }
-});
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        
+        var content = this.nextElementSibling;
+
+        if (content.style.maxHeight){
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
 }
 
 setTimeout(() => {
