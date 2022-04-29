@@ -281,10 +281,12 @@ html,
     font-weight: 100;
   } .intro_ctnr strong {
     font-weight: 100;
+  } .intro_ctnr h2,.intro_ctnr h1 {
+    text-shadow: 0 0.4rem 0.1rem rgba(0,0,0,0.1);
   } .intro_ctnr h2 strong {
-    background-color: var(--c2b);
+    
   } .intro_ctnr h1 strong {
-    background-color: var(--c1d);
+    
   } h1 {
     color:var(--c1);
     font-weight: 100;
@@ -745,15 +747,15 @@ footer {
 
   @media (min-width:1920px) {
     html {
-        font-size:20px;
+        font-size:12px;
     }
   } @media (min-width:2440px) {
     html {
-        font-size:24px;
+        font-size:14px;
     }
   } @media (min-width:3000px) {
     html {
-        font-size:32px;
+        font-size:18px;
     }
   }
 
