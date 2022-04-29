@@ -56,11 +56,33 @@ function toggleNav() {
 
 hambt.addEventListener('click', toggleNav)
 
+let isMobile;
+
+if(window.matchMedia('(min-width:820px)').matches) {
+    isMobile = false;
+} else {
+    isMobile = true;
+}
+
 let windowPosition;
+const fixedCTA = document.querySelector('header .cta_ctnr')
+
 document.body.onscroll = function() {
     windowPosition = window.pageYOffset;
 
     if(showingNav == true) {
         toggleNav()
     }
+
+    if(isMobile == true) {
+        if(windowPosition > window.innerHeight / 2) {
+            fixedCTA.style.transform = 'translateY(0)'
+        } else {
+            fixedCTA.style.transform = 'translateY(100%)'
+        }
+    }
 }
+
+
+
+

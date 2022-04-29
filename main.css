@@ -38,6 +38,7 @@ html,
 
     --c2:#564483;
     --c2b:#f2edff;
+    --c2c:#715ca3;
 
     --c3:#004f30;
     --c3b:#003922;
@@ -128,10 +129,10 @@ html,
     position: relative;
     display: flex;
     justify-content: right;
-    gap: 3rem;
+    gap: clamp(2rem, 7vw, 3rem);
     align-items: center;
-    padding: 4rem 0 2rem 0;
-    margin-bottom: clamp(1rem, 6vw, 3rem);
+    padding: clamp(3rem, 10vw, 4rem) 0 2rem 0;
+    margin-bottom: clamp(1rem, 3vw, 3rem);
   } header nav {
     left: 0;
     right: 0;
@@ -147,6 +148,8 @@ html,
     z-index: 2;
     border-radius: 0.9rem;
     border: 1px solid #222;
+    margin: 0 0 0 auto;
+    max-width: 34rem;
   } .showing_nav {
     opacity: 1;
     visibility: visible;
@@ -157,7 +160,7 @@ html,
     gap: clamp(1.2rem, 3vw, 2.5rem);
     color: var(--light);
   } .nav_ctnr a {
-    padding: 0.6rem;
+    padding: clamp(0.6rem, 2.5vw, 1rem) 0.6rem;
     border: 0.1rem solid var(--light);
     border-radius: 0.4rem;
     font-size: clamp(1rem, 4vw, 1.2rem);
@@ -180,7 +183,7 @@ html,
     border-radius: 0.6rem;
   } .hambt div {
     background-color: var(--c1);
-    height: 0.5rem;
+    height: clamp(0.4rem, 1.2vw, 0.5rem);
     border-radius: 0.15rem;
   }
 
@@ -190,9 +193,10 @@ html,
     left:0;
     right:0;
     background-color: #14002fed;
-    padding: 1.2rem 0;
+    padding: 1.6rem 0;
     z-index: 3;
     transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
 
@@ -214,11 +218,12 @@ html,
     transition: box-shadow 0.5s ease, background-color 0.5s ease, transform 0.5s ease;
     line-height: 1.4;
     font-family: 'Stretch Pro', sans-serif;
+    transform: translateY(-0.25rem);
   } header .cta {
     background-color: var(--c1);
     display: block;
     margin: 0 auto;
-    width: clamp(10rem, 82vw, 27rem);
+    width: clamp(10rem, 82vw, 24rem);
   } .intro_ctnr .cta:hover {
     box-shadow: inset 0 0 0 0.2rem var(--c3), inset 0 0 0 0.3rem var(--light), 0 0.1rem 0rem 0rem var(--c3b);
   } .cta:hover {
@@ -246,6 +251,16 @@ html,
   .intro_sec {
     position: relative;
     box-shadow: inset 0 -8rem 10rem -10rem var(--dark);
+  } .intro_sec .icons_row {
+    gap: clamp(1rem, 4vw, 1.2rem);
+  } .intro_sec .icons_row a {
+    background-color: var(--c2);
+    width: clamp(2.5rem, 9vw, 3.3rem);
+    height: clamp(2.5rem, 9vw, 3.3rem);
+    box-shadow: inset 0 0 0 0.2rem var(--c2), inset 0 0 0 0.3rem var(--light);
+    background-size: 50%;
+  } .intro_sec .icons_row a:hover {
+    background-color: var(--c2c);
   } .intro_ctnr {
     position: relative;
     display: flex;
@@ -258,7 +273,7 @@ html,
     gap: clamp(1rem, 4vw, 1.6rem);
     letter-spacing: 0.1rem;
     margin: 0 auto;
-    align-items: flex-start;
+    align-items: center;
     text-align: center;
     line-height: 1.4;
   } .homem {
@@ -380,9 +395,11 @@ html,
     margin: 0.6rem 0 1rem 0;
   } .roadmap_section .cta {
     background-color: var(--c1);
-    width: clamp(16rem, calc(90vw - 12rem), 21rem);
+    width: clamp(15rem, calc(90vw - 12rem), 17rem);
     display: inline-block;
     margin-bottom: 1rem;
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    padding: clamp(0.6rem, 2vw, 0.8rem);
   }
 
 
@@ -398,15 +415,15 @@ html,
 footer {
   background-color: var(--c2);
   padding: clamp(4rem, 10vw, 5rem) 0;
-  margin: clamp(4rem, 10vw, 6rem) 0;
+  margin: clamp(4rem, 10vw, 6rem) 0 clamp(4rem, 36vw, 11rem);
   box-sizing: border-box;
 } footer .logo {
   width: clamp(22rem, 75vw, 35rem);
-} footer .width1, footer nav {
+} footer .width1, footer nav, .icons_row {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: clamp(1rem, 7vw, 2.5rem);
+  gap: clamp(1rem, 6vw, 2.5rem);
 } footer nav, .icons_row {
   flex-direction: row;
 } footer .width1 {
@@ -477,6 +494,8 @@ footer {
       width: unset;
       white-space: nowrap;
       padding: 1rem 3rem;
+    } header nav {
+      max-width: 23rem;
     }
 
     .cta {
@@ -489,18 +508,19 @@ footer {
       flex-direction: row-reverse;
       justify-content: center;
     } .intro_ctnr a, .intro_ctnr .cta {
-      margin: 1rem 0 0 0;
       width: clamp(21rem, calc(30vw - 8rem), 32rem);
+    } .intro_ctnr .cta {
+      margin: 1rem 0 0 0;
     } .intro_ctnr .content {
       margin: unset;
       width: clamp(26rem, calc(30vw - 4rem), 46rem);
       font-size: clamp(1.7rem, 1.5vw, 2.3rem);
-      gap: clamp(0rem, calc(4vw - 3rem), 2rem);
-      padding-top: clamp(0rem, calc(10vw - 12rem), 5rem);
+      gap: clamp(0rem, calc(4vw - 3rem), 1.4rem);
       text-align: left;
+      align-items: flex-start;
     } .homem {
       margin:unset;
-      width: clamp(32rem, 34vw, 50rem);
+      width: clamp(34rem, 38vw, 50rem);
     }
 
     .det1, .det2 {
@@ -544,9 +564,13 @@ footer {
       width: clamp(38rem, 42vw, 72rem);
       flex: 1;
       position: sticky;
-      top: 11rem;
+      top: 15vh;
+      filter: drop-shadow(0px 0.6rem 0.1rem rgba(0,0,0,0.2));
     }
 
+    footer {
+      margin: clamp(4rem, 10vw, 6rem) 0;
+    }
     footer .width1 {
       flex-direction: row;
       justify-content: space-between;
@@ -627,6 +651,8 @@ footer {
       border-radius: unset;
       transform: translateY(5%);
       transition: unset;
+      max-width: unset;
+      margin: 0;
     }  
 
 
