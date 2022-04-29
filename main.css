@@ -43,6 +43,7 @@ html,
     --c3:#004f30;
     --c3b:#003922;
     --c3c:#007a49;
+    --c3d:#d1e9df;
   }
   
   html {
@@ -104,10 +105,14 @@ html,
 
 
   ::selection {
-    background-color:#eee;
-    color:var(--c2c);
+    background-color:rgba(135,135,135,0.3);
+    color:unset;
   }
 
+  .width2 {
+    width: clamp(10rem, 82vw, 80rem);
+    margin:0 auto;
+  } 
 
 
 
@@ -281,12 +286,8 @@ html,
     font-weight: 100;
   } .intro_ctnr strong {
     font-weight: 100;
-  } .intro_ctnr h2,.intro_ctnr h1 {
+  } .intro_ctnr .content strong {
     text-shadow: 0 0.4rem 0.1rem rgba(0,0,0,0.1);
-  } .intro_ctnr h2 strong {
-    
-  } .intro_ctnr h1 strong {
-    
   } h1 {
     color:var(--c1);
     font-weight: 100;
@@ -455,57 +456,88 @@ footer {
 
 
 .faq_section {
-  padding: clamp(6rem, 10vw, 11rem) 0;
+  padding: clamp(5rem, 10vw, 9rem) 0;
+} .faq_section h3 {
+  font-size: clamp(2.3rem, 7vw, 3.5rem);
+  color: var(--c3);
+  text-align: center;
+  margin-bottom: clamp(3.5rem, 9vw, 4rem);
+  font-weight: 100;
+  line-height: 1.2;
 } .collapsible {
-  color: var(--white01);
+  color: var(--light);
   cursor: pointer;
-  padding: 1rem 1rem 1rem 3rem;
+  padding: 1rem 1rem 1rem 4.5rem;
   width: 100%;
-  border: none;
   text-align: left;
   outline: none;
-  font-size: 1.2rem;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 500;
-  background-color: #0000;
-  border: 3px solid var(--green02);
-  transition: background-color 1.2s ease;
+  font-size: clamp(1.5rem, 4.5vw, 1.7rem);
+  background-color: var(--c3);
+  border: none;
+  transition: background-color 0.4s ease;
   user-select: none;
   position: relative;
-} .collapsible div {
-  width: 2rem;
-  position: absolute;
-  background: var(--green02);
-  left: -1px;
-  top: -1px;
-  bottom: -1px;
+  font-family: 'Overpass Mono';
+  display: flex;
+  align-items: stretch;
+  border-radius: 0.6rem;
+  min-height: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 0.4rem 0rem 0rem var(--c3c);
+  overflow: hidden;
+} .collapsible:hover {
+  transition: background-color 0.06s ease;
+  background-color: var(--c3c);
+} .collapsible > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 3rem;
+  background-color: var(--c3c);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 0.6rem 0 0 0.6rem;
+  box-shadow: 0 0 2rem 0.4rem var(--c3);
 } .collapsible div div {
-  width: 0.3rem;
-  height: 0.3rem;
-  border-right: 0.15rem solid var(--dark);
-  border-bottom: 0.15rem solid var(--dark);
-  transform: rotate(-45deg);
   position: relative;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 0.3rem solid var(--light);
+  border-bottom: 0.3rem solid var(--light);
+  transform: rotate(-45deg);
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   transform-origin: 60% 60%;
 } .active div div {
   transform: rotate(45deg);
 } .collapsible_content {
-  padding: 0 18px;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  background: var(--green02);
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  color: var(--darkb);
+  background: #e3f5ed80;
+  position: relative;
+  top: -1rem;
+  border-radius: 0 0 0.6rem 0.6rem;
+  border: 0.1rem solid var(--c3d);
 } .collapsible_content p {
   color: var(--black01);
   font-weight: 600;
   text-align: left;
-  font-size: clamp(1rem, 1.5vw, 1rem);
-  line-height: clamp(1.3rem, 3vw, 1.6rem);
+  font-size: clamp(1.5rem, 3.8vw, 1.6rem);
+  line-height: 1.4;
+  font-family: 'Overpass Mono';
+  margin: 3rem 3rem 2rem 3rem;
+} .collapsible_content b, .collapsible_content a {
+  color: var(--c3);
+} .collapsible_content a {
+  background-color: var(--c3d);
+} .collapsible_content a:hover {
+  background-color:var(--light);
 }
 
 
