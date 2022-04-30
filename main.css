@@ -491,6 +491,8 @@ html,
   font-size: clamp(1.5rem, 3.8vw, 1.6rem);
   line-height: 1.4;
   font-family: 'Overpass Mono';
+  margin: 1.2rem 0 0 0;
+} .collapsible_content .content {
   margin: 3rem 3rem 2rem 3rem;
 } .collapsible_content b, .collapsible_content a {
   color: var(--c3);
