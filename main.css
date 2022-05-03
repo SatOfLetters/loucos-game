@@ -288,7 +288,7 @@ html,
     display: flex;
   } .intro_ctnr h2 {
     color:var(--c2);
-    margin: 0.4rem 0 0.6rem;
+    margin: 0.4rem 0 0.9rem;
   } .intro_ctnr strong {
 
   } .intro_ctnr .content strong {
@@ -432,11 +432,11 @@ html,
 } .faq_section .width2 > .content {
   overflow: scroll;
   max-height: 40rem;
-  padding-right: 1rem;
+  padding-right: 1.5rem;
 } .faq_section .content::-webkit-scrollbar {
   width: 0.6rem;
 } .faq_section .content::-webkit-scrollbar-thumb {
-  background-color:var(--c3);
+  background-color:var(--c3c);
 } .collapsible {
   color: var(--light);
   cursor: pointer;
