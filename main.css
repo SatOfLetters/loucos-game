@@ -18,13 +18,9 @@ html,
   }
 
   @font-face {
-    font-family: 'Stretch Pro';
-    src: url(assets/fonts/stretch-pro.otf);
-  } @font-face {
-    font-family: 'Overpass Mono';
-    src: url(assets/fonts/overpass_mono.ttf);
+    font-family: 'Exo 2';
+    src: url(assets/fonts/Exo2-VariableFont_wght.ttf);
   }
-  
   :root {
     --light: #ffffff;
 
@@ -44,6 +40,10 @@ html,
     --c3b:#003922;
     --c3c:#007a49;
     --c3d:#d1e9df;
+
+    --font-weight: 750;
+    --font-weightb: 450;
+    --font-weightc: 300;
   }
   
   html {
@@ -60,7 +60,7 @@ html,
   body,
   button,
   input {
-    font-family: 'Stretch Pro', sans-serif;
+    font-family: 'Exo 2', sans-serif;
   }
 
   input:focus {
@@ -113,6 +113,12 @@ html,
     width: clamp(10rem, 82vw, 80rem);
     margin:0 auto;
   } 
+
+  .cta, .intro_ctnr strong, .intro_ctnr b, .intro_ctnr h2, .intro_ctnr h1, header nav {
+    font-weight: 100;
+    font-family: 'Exo 2', sans-serif;
+    font-variation-settings: 'wght' var(--font-weight);
+  }
 
 
 
@@ -168,7 +174,7 @@ html,
     padding: clamp(0.6rem, 2.5vw, 1rem) 0.6rem;
     border: 0.1rem solid var(--light);
     border-radius: 0.4rem;
-    font-size: clamp(1rem, 4vw, 1.2rem);
+    font-size: clamp(1rem, 4vw, 1.6rem);
     font-weight: 100;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
@@ -211,7 +217,7 @@ html,
 
 
   .cta {
-    font-size: clamp(1.2rem, 3.5vw, 1.5rem);
+    font-size: clamp(1rem, 4vw, 1.6rem);
     text-align: center;
     color: var(--light);
     border-radius: 0.8rem;
@@ -222,7 +228,6 @@ html,
     box-shadow: inset 0 0 0 0.2rem var(--c1), inset 0 0 0 0.3rem var(--light), 0 0.4rem 0rem 0rem var(--c1b);
     transition: box-shadow 0.5s ease, background-color 0.5s ease, transform 0.5s ease;
     line-height: 1.4;
-    font-family: 'Stretch Pro', sans-serif;
     transform: translateY(-0.25rem);
   } header .cta {
     background-color: var(--c1);
@@ -257,8 +262,8 @@ html,
     gap: clamp(1rem, 4vw, 1.2rem);
   } .intro_sec .icons_row a {
     background-color: var(--c2);
-    width: clamp(2.5rem, 9vw, 3.3rem);
-    height: clamp(2.5rem, 9vw, 3.3rem);
+    width: clamp(2.5rem, 9vw, 2.7rem);
+    height: clamp(2.5rem, 9vw, 2.7rem);
     box-shadow: inset 0 0 0 0.2rem var(--c2), inset 0 0 0 0.3rem var(--light);
     background-size: 50%;
   } .intro_sec .icons_row a:hover {
@@ -267,36 +272,34 @@ html,
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: clamp(3rem, calc(20vw - 4rem), 5rem);
+    gap: clamp(3rem, calc(20vw - 4rem), 6rem);
   } .intro_ctnr .content {
-    font-size: clamp(1.2rem, 4.2vw, 2.3rem);
+    font-size: clamp(1.2rem, 5vw, 3.3rem);
     display: flex;
     flex-direction: column;
-    gap: clamp(1rem, 4vw, 1.6rem);
     letter-spacing: 0.1rem;
     margin: 0 auto;
     align-items: center;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.2;
   } .homem {
     width:clamp(16rem, 80vw, 55rem);
     margin:0 auto;
     display: flex;
   } .intro_ctnr h2 {
     color:var(--c2);
-    font-weight: 100;
+    margin: 0.4rem 0 0.6rem;
   } .intro_ctnr strong {
-    font-weight: 100;
+
   } .intro_ctnr .content strong {
-    text-shadow: 0 0.4rem 0.1rem rgba(0,0,0,0.1);
+    
   } h1 {
     color:var(--c1);
-    font-weight: 100;
   } .intro_ctnr .cta {
-    background-color: var(--c3);
+    background-color: var(--c3c);
     width: clamp(21rem, calc(90vw - 12rem), 36rem);
-    box-shadow: inset 0 0 0 0.2rem var(--c3), inset 0 0 0 0.3rem var(--light), 0 0.4rem 0rem 0rem var(--c3b);
-    margin: 0 auto;
+    box-shadow: inset 0 0 0 0.2rem var(--c3c), inset 0 0 0 0.3rem var(--light), 0 0.4rem 0rem 0rem var(--c3);
+    margin: 2rem auto 0 auto;
   }
 
 
@@ -335,8 +338,7 @@ html,
   } .definition_section .content {
 
   } .definition_section .content p {
-    font-size: clamp(1.3rem, 4.4vw, 2.4rem);
-    font-family: 'Overpass Mono';
+    font-size: clamp(1.6rem, 4.8vw, 2.4rem);
     margin: 2rem 0;
     max-width: 50rem;
     line-height: 1.6;
@@ -371,7 +373,6 @@ html,
     transform: translateY(-47%);
   } .roadmap_section ol {
     padding: 0 0 0 3rem;
-    font-family: 'Overpass Mono';
     display: flex;
     flex-direction: column;
     gap: clamp(1rem, 5vw, 2rem);
@@ -389,13 +390,17 @@ html,
     width: clamp(22rem, 82vw, 62rem);
   } .roadmap_section li h3 {
     font-weight: 600;
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    line-height: 1.4;
+    font-size: clamp(1.5rem, 6vw, 2.8rem);
+    line-height: 1.3;
+    font-variation-settings: 'wght' var(--font-weightb);
+    letter-spacing: 0.1rem;
   } .roadmap_section li p {
     font-size: clamp(1.2rem, 3.8vw, 1.7rem);
     font-weight: 100;
     margin: 0.6rem 0 1rem 0;
     line-height: 1.5;
+    font-variation-settings: 'wght' var(--font-weightc);
+    letter-spacing: 0.1rem;
   } .roadmap_section .cta {
     background-color: var(--c1);
     width: clamp(15rem, calc(90vw - 12rem), 17rem);
@@ -424,6 +429,14 @@ html,
   margin-bottom: clamp(3.5rem, 9vw, 4rem);
   font-weight: 100;
   line-height: 1.2;
+} .faq_section .width2 > .content {
+  overflow: scroll;
+  max-height: 40rem;
+  padding-right: 1rem;
+} .faq_section .content::-webkit-scrollbar {
+  width: 0.6rem;
+} .faq_section .content::-webkit-scrollbar-thumb {
+  background-color:var(--c3);
 } .collapsible {
   color: var(--light);
   cursor: pointer;
@@ -437,7 +450,6 @@ html,
   transition: background-color 0.4s ease;
   user-select: none;
   position: relative;
-  font-family: 'Overpass Mono';
   display: flex;
   align-items: stretch;
   border-radius: 0.6rem;
@@ -490,7 +502,6 @@ html,
   text-align: left;
   font-size: clamp(1.5rem, 3.8vw, 1.6rem);
   line-height: 1.4;
-  font-family: 'Overpass Mono';
   margin: 1.2rem 0 0 0;
 } .collapsible_content .content {
   margin: 3rem 3rem 2rem 3rem;
@@ -605,7 +616,7 @@ footer {
     }
 
     .cta {
-      font-size: clamp(1.2rem, 3.5vw, 1.3rem);
+      font-size: clamp(1.3rem, 1vw, 1.5rem);
     }
   
     .intro_sec header {
@@ -614,14 +625,13 @@ footer {
       flex-direction: row-reverse;
       justify-content: center;
     } .intro_ctnr a, .intro_ctnr .cta {
-      width: clamp(21rem, calc(30vw - 8rem), 32rem);
+      width: clamp(21rem, 18vw, 27rem);
     } .intro_ctnr .cta {
-      margin: 1rem 0 0 0;
+      margin: 2.5rem 0 0 0;
     } .intro_ctnr .content {
       margin: unset;
-      width: clamp(26rem, calc(30vw - 4rem), 46rem);
-      font-size: clamp(1.7rem, 1.5vw, 2.3rem);
-      gap: clamp(0rem, calc(4vw - 3rem), 1.4rem);
+      width: clamp(26rem, calc(35vw - 4rem), 50rem);
+      font-size: clamp(2.1rem, 2vw, 3rem);
       text-align: left;
       align-items: flex-start;
     } .homem {
@@ -647,8 +657,8 @@ footer {
       transform: scale(1.7) rotate(-8deg);
       width: clamp(16rem, 24vw, 32rem);
     } .definition_section .content p {
-      font-size: clamp(1.3rem, 2.3vw, 2rem);
-      width: clamp(35rem, 40vw, 41rem);
+      font-size: clamp(1.8rem, 1.15vw, 2rem);
+      width: clamp(35rem, 40vw, 47rem);
       line-height: 1.6;
     } .boa_jogada, .prox_jogada {
       width: clamp(13rem, 40vw, 50rem);
@@ -734,7 +744,7 @@ footer {
 
 
 
-  @media (min-width:1400px) {
+  @media (min-width:1200px) {
 
     .hambt {
       display:none;
@@ -748,9 +758,11 @@ footer {
       padding: 0.6rem clamp(1rem, 1.5vw, 1.4rem);
       transition: background-color 0.5s ease;
       background-color: var(--light);
+      font-size: clamp(1rem, 4vw, 1.5rem);
       border: 0.1rem solid var(--c2b);
+      color: var(--c2);
     } .nav_ctnr a:hover {
-      background-color: var(--c1d);
+      background-color: #f5f5f5;
       transition: background-color 0.06s ease;
     }
     header nav {
