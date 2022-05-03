@@ -612,7 +612,7 @@ footer {
     } header .cta {
       width: unset;
       white-space: nowrap;
-      padding: 1rem 3rem;
+      padding: 0.9rem 3rem;
     } header nav {
       max-width: 23rem;
     }
