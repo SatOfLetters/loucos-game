@@ -435,9 +435,10 @@ html,
   font-variation-settings: 'wght' var(--font-weightb);
   line-height: 1.2;
 } .faq_section .width2 > .content {
-  overflow: scroll;
+  overflow-y: scroll;
   max-height: 40rem;
   padding-right: 1.5rem;
+  position: relative;
 } .faq_section .content::-webkit-scrollbar {
   width: 0.6rem;
 } .faq_section .content::-webkit-scrollbar-thumb {
