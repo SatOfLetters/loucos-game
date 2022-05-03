@@ -494,7 +494,7 @@ html,
   transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   margin-bottom: 1.5rem;
   color: var(--darkb);
-  background: #e3f5ede6;
+  background: #e3f5ed;
   position: relative;
   top: -1rem;
   border-radius: 0 0 0.6rem 0.6rem;
@@ -687,14 +687,8 @@ footer {
       flex: 1;
       position: sticky;
       top: 15vh;
-      filter: drop-shadow(0px 0.6rem 0.1rem rgba(0,0,0,0.2));
+      filter: drop-shadow(0px 0.5rem 0.1rem rgba(0,0,0,0.1));
       margin-top: 4rem;
-    }
-
-
-
-    .collapsible_content {
-      background: #e3f5ed80;
     }
 
 
