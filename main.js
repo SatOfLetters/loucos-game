@@ -79,7 +79,7 @@ document.body.onscroll = function() {
         if(windowPosition > window.innerHeight / 2) {
             fixedCTA.style.transform = 'translateY(0)'
         } else {
-            fixedCTA.style.transform = 'translateY(100%)'
+            // fixedCTA.style.transform = 'translateY(100%)'
         }
     } else {
         homem.style.transform = 'translateY(' + windowPosition / 4 + 'px)';
