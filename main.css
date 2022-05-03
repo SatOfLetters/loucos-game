@@ -20,6 +20,9 @@ html,
   @font-face {
     font-family: 'Exo 2';
     src: url(assets/fonts/Exo2-VariableFont_wght.ttf);
+  } @font-face {
+    font-family: 'Stretch Pro';
+    src: url(assets/fonts/stretch-pro.otf);
   }
   :root {
     --light: #ffffff;
