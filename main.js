@@ -82,7 +82,7 @@ document.body.onscroll = function() {
             // fixedCTA.style.transform = 'translateY(100%)'
         }
     } else {
-        homem.style.transform = 'translateY(' + windowPosition / 4 + 'px)';
+        homem.style.transform = 'translateY(' + windowPosition / 3 + 'px)';
     }
 }
 

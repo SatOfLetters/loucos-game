@@ -366,6 +366,7 @@ html,
     background-color:var(--c2);
     color: var(--c1d);
     padding: 0 0 clamp(6rem, 10vw, 11rem) 0;
+    position: relative;
   } .roadmap_section .content {
     display: flex;
     flex-direction: column;
